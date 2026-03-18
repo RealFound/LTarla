@@ -1,0 +1,16 @@
+name: LTarla
+version: '1.0'
+main: plugin.ltarla.LTarla
+api-version: '1.19'
+authors: [Agent]
+
+commands:
+  ltarla:
+    description: LTarla ana komutu
+    usage: "/ltarla <args>"
+    permission: ltarla.admin
+
+permissions:
+  ltarla.admin:
+    description: LTarla komutlarini kullanma yetkisi
+    default: op

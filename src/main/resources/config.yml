@@ -1,0 +1,17 @@
+# LTarla Eklentisi Ana Ayar Dosyasi
+
+# Etkinlik aktif edilsin mi? (Belirli araliklarla rastgele etkinlik baslar)
+etkinlik_aktif: true
+
+# Etkinlik basladiginda ozel esya dusurme sansi kac katina ciksin?
+etkinlik_carpan: 2.0
+
+# Etkinlik ne kadar sursun? (saniye cinsinden)
+etkinlik_suresi: 600
+
+# Etkinlik duyuru mesaji (Sunucudaki herkese Title olarak gider)
+etkinlik_basladi_mesaj: "&e&lTARLA ETKINLIGI BASLADI!|&aTum tarlalarda esya dusme sansi &c2 Katina &acikti!"
+etkinlik_bitti_mesaj: "&c&lTARLA ETKINLIGI BITTI!|&eSanslar normale dondu."
+
+# Mesaj oncesi eklenti on eki
+prefix: "&8[&eLTarla&8] "
