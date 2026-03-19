@@ -2,7 +2,7 @@ name: LTarla
 version: '1.0'
 main: plugin.ltarla.LTarla
 api-version: '1.19'
-authors: [Agent]
+authors: [Professional]
 
 commands:
   ltarla:

@@ -22,8 +22,6 @@ public class EventManager {
     public void startEventTask() {
         if (eventTask != null) return;
         
-        // Rastgele saatlerde baslamasi icin bir timer. 
-        // Her 30 dakikada bir %10 sansla baslayabilir.
         eventTask = new BukkitRunnable() {
             @Override
             public void run() {
@@ -32,7 +30,7 @@ public class EventManager {
                 }
             }
         };
-        eventTask.runTaskTimer(plugin, 20L * 60 * 30, 20L * 60 * 30); // 30 dakikada bir kontrol
+        eventTask.runTaskTimer(plugin, 20L * 60 * 30, 20L * 60 * 30);
     }
 
     public void stopEventTask() {
@@ -45,7 +43,6 @@ public class EventManager {
     public void startEvent() {
         isEventActiveNow = true;
         
-        // Duyuru
         String[] startMsg = plugin.getConfigManager().getEventStartMessage();
         String title = startMsg.length > 0 ? org.bukkit.ChatColor.translateAlternateColorCodes('&', startMsg[0]) : "";
         String subTitle = startMsg.length > 1 ? org.bukkit.ChatColor.translateAlternateColorCodes('&', startMsg[1]) : "";
@@ -55,7 +52,6 @@ public class EventManager {
             p.sendMessage(plugin.getConfigManager().getPrefix() + title + " " + subTitle);
         }
 
-        // Bitis saniyesi
         new BukkitRunnable() {
             @Override
             public void run() {

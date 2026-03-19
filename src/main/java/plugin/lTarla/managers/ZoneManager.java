@@ -90,7 +90,6 @@ public class ZoneManager {
         config.set("maxZ", zone.getMaxZ());
         config.set("respawn-time", zone.getRespawnTimeSeconds());
 
-        // Varsayılan drop örneklerini sadece baştan yaratırken koyalım, sonradan silerse tekrar eklemesin
         if (!file.exists()) {
             config.set("drops.example_money.chance", 1.0);
             config.set("drops.example_money.is-command", true);

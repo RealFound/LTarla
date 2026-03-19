@@ -19,7 +19,7 @@ public final class LTarla extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        // Managers
+
         this.configManager = new ConfigManager(this);
         this.configManager.loadConfig();
 
@@ -31,11 +31,11 @@ public final class LTarla extends JavaPlugin {
             this.eventManager.startEventTask();
         }
 
-        // Commands
+
         getCommand("ltarla").setExecutor(new LTarlaCommand(this));
         getCommand("ltarla").setTabCompleter(new LTarlaCommand(this));
 
-        // Listeners
+
         getServer().getPluginManager().registerEvents(new WandListener(this), this);
         getServer().getPluginManager().registerEvents(new WheatListener(this), this);
 
