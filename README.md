@@ -1,86 +1,83 @@
-# 🌾 LTarla
+# LTarla
 
-**Gelişmiş, Şansa Dayalı, Özel Tarlalar ve Etkinlikler ile Dolu Tarım Eklentisi!**
-
----
-
-## 📖 Hakkında (About)
-
-LTarla, Minecraft sunucunuz için sıradan buğday tarımını tamamen başka bir boyuta taşıyan eşsiz bir Skyblock / Survival eklentisidir.
-
-WorldEdit kullanır gibi `LTarla Asası` ile belirli bir alanı seçip kendi tarlanızı oluşturabilirsiniz. Oluşturduğunuz her tarla tamamen **kendisine has ödüllere**, **şans oranlarına** ve **yenilenme sürelerine** sahip olur! 
-
-Oyuncularınız buğdayları kırdığında buğday anında havaya (Air) dönüşür ve üzerinde çok gerçekçi ve sihirli köylü (VILLAGER_HAPPY) parçacıkları uçuşmaya başlar. Süre dolduğunda ise tek seferde sihirli bir ses ve görkemli bir parçacık efektiyle bir anda **Tamamen Büyümüş (Age 7)** olarak geri çıkar!
+Advanced and customizable farming and event management plugin for Minecraft servers.
 
 ---
 
-## ✨ Özellikler (Features)
+## Hakkında
 
-- **🖌️ Gelişmiş Alan Seçimi:** Kendi yapısıyla `//wand` mantığında çalışır. Belirlediğiniz tarlalar yalnızca buğday (Wheat) kırılmasını özel olaya dâhil eder, oyuncular başka blokları kırdığında hiçbir sorun olmaz.
-- **🎁 Tarlaya Özel Bağımsız Ödül Sistemi (Custom Drops):**
-  - Her tarlanın kendi `yml` dosyası vardır (örn: `zones/vip_tarla.yml`).
-  - Düşecek ödüller genel değil, tarlaya özeldir. `%1` şansla oyuncuya para verebilir, `%0.5` şansla özel isimli (Tarla Coin) eşyalar düşürebilirsiniz.
-  - Sınır yok! İster komut çalıştırın (`eco give %player% 500`), ister özel eşyalar düşürün.
-- **✨ Gerçekçi Parcha (Particle) Efektleri:** Kırılan buğdayların boşluklarında büyümesini beklerken, tabandan çıkıp havaya yükselen gerçekçi yeşil köylü (Villager Happy) yıldızları çıkar. Tamamen büyüdüğünde efsanevi bir efektle bir anda ortaya çıkar.
-- **🎉 Otomatik "Tarla Yükselişi" Etkinlikleri:** Sistem, rastgele saat dilimlerinde (veya belirttiğiniz aralıklarla) sunucu çapında "Tarla Etkinliği" başlatır. 
-  - Ekrandan ve sohbetten büyük duyurular geçer.
-  - Etkinlik esnasında ayarladığınız `etkinlik_carpan` aktif olur (Örn: Çarpan 2 ise %1 düşme ihtimali olan eşya %2 ihtimalle düşer).
+LTarla, Minecraft sunucuları için geliştirilmiş, alan bazlı yapılandırılabilir bir tarım ve etkinlik yönetimi sistemidir. 
+
+Sunucu yöneticileri, oyun içerisinde belirli bölgeleri "özel tarla" olarak tanımlayarak bu alanlara standart dışı düşme oranları (drop rates), özel ödüller ve yeniden doğma süreleri atayabilir. Skyblock ve Survival gibi oyun modlarında ekonomiyi desteklemek amacıyla tasarlanmıştır.
+
+Kırılan ekinlerin yerine, yapılandırılan süre zarfında otomatik olarak yenisi büyür ve bu süreç optimize edilmiş parçacık (particle) efektleriyle desteklenir.
 
 ---
 
-## 💻 Komutlar ve Yetkiler (Commands & Permissions)
+## Özellikler
 
-| Komut | Yetki (Permission) | Açıklama |
+- **Bölge Seçimi:** WorldEdit benzeri asal bir seçim aracıyla hızlı tarla bölgeleri oluşturabilme. Sistem sadece tanımlı bölgelerdeki ekinleri kontrol eder, dışarıdaki blok kırılımlarına müdahale etmez.
+- **Bağımsız Ödül Sistemi (Custom Drops):**
+  - Her bölge kendi özel yapılandırma (yml) dosyasına sahiptir.
+  - Şansa bağlı olarak eşya düşürme veya doğrudan komut çalıştırma desteği (örneğin: `eco give %player% 500`).
+- **Görsel Efektler:** Büyüme ve hasat işlemleri için performansı etkilemeyen, optimize edilmiş gerçekçi parçacık efektleri.
+- **Tarla Etkinlikleri:** Sistem, zaman yönetimi aracılığıyla sunucu genelinde rastgele etkinlikler başlatabilir. Etkinlik süresince tüm özel düşme oranları, ayarlanan çarpan değeri kadar geçici olarak artar.
+
+---
+
+## Komutlar ve Yetkiler
+
+| Komut | Yetki | Açıklama |
 | --- | --- | --- |
-| `/ltarla wand` | `ltarla.admin` | Envanterinize alan seçimi için "LTarla Asası" verir. Sol tık: 1. Nokta, Sağ tık: 2. Nokta |
-| `/ltarla create <TarlaIsmi>` | `ltarla.admin` | Asa ile seçtiğiniz bölgeyi yeni bir tarla olarak kaydeder. |
-| `/ltarla reload` | `ltarla.admin` | `config.yml` ve tüm tarla dosyalarındaki değişikleri oyuna yansıtır. |
+| `/ltarla wand` | `ltarla.admin` | Alan seçimi için gerekli asayı verir (Sol tık: 1. Nokta, Sağ tık: 2. Nokta). |
+| `/ltarla create <TarlaIsmi>` | `ltarla.admin` | Seçilen alanı yeni bir tarla bölgesi olarak kaydeder. |
+| `/ltarla reload` | `ltarla.admin` | Yapılandırma dosyalarını ve tarla verilerini yeniden yükler. |
 
 ---
 
-## 🛠️ Kurulum (Installation)
+## Kurulum
 
-1. Eklentinin `.jar` dosyasını indirin.
-2. Sunucunuzdaki `plugins/` klasörüne yapıştırın.
-3. Sunucuyu yeniden başlatın. (Veya Plugman benzeri eklentilerle yükleyin)
-4. Artık kullanıma hazır! Oyun içerisinden `/ltarla wand` ve `/ltarla create test` yaparak ilk tarlanızı oluşturun, `plugins/LTarla/zones/test.yml` üzerinden tarlanızın ödüllerini düzenleyin.
+1. Eklentinin güncel `.jar` dosyasını indirebilir veya derleyebilirsiniz.
+2. Sunucunuzun `plugins/` dizinine taşıyın.
+3. Sunucunuzu yeniden başlatın.
+4. Eklenti ilk başlatıldığında varsayılan `config.yml` ve ilk bölge dosyasını `plugins/LTarla` dizini altında otomatik oluşturacaktır.
 
 ---
 
-## ⚙️ Config & Zone Dosya Örneği (Configuration Preview)
+## Konfigürasyon Örneği
 
-**`plugins/LTarla/config.yml`**
+**config.yml**
 ```yaml
 etkinlik_aktif: true
 etkinlik_carpan: 2.0
 etkinlik_suresi: 600
-etkinlik_basladi_mesaj: "&e&lTARLA ETKINLIGI BASLADI!|&aTum tarlalarda esya dusme sansi &c2 Katina &acikti!"
-etkinlik_bitti_mesaj: "&c&lTARLA ETKINLIGI BITTI!|&eSanslar normale dondu."
+etkinlik_basladi_mesaj: "&e&lTARLA ETKİNLİĞİ BAŞLADI!|&aTüm tarlalarda eşya düşme şansı &c2 Katına &açıktı!"
+etkinlik_bitti_mesaj: "&c&lTARLA ETKİNLİĞİ BİTTİ!|&eŞanslar normale döndü."
 prefix: "&8[&eLTarla&8] "
 ```
 
-**`plugins/LTarla/zones/baslangic_tarlasi.yml`**
+**zones/baslangic.yml**
 ```yaml
 world: "world"
 minX: -10.0
 # ...
-respawn-time: 60 # Saniye cinsinden yenilenme suresi
+respawn-time: 60
 drops:
   ornek_para:
-    chance: 1.0 # %1 Ihtimalle
-    is-command: true # Esya degil komut calisacak
+    chance: 1.0 # %1
+    is-command: true
     commands:
       - "eco give %player% 100"
-      - "msg %player% &a100 TL kazandin!"
+      - "msg %player% &a100 TL kazandın!"
   ornek_esya:
-    chance: 2.0 # %2 Ihtimalle
-    is-command: false # Gercek envantere esya verecek
+    chance: 2.0 # %2
+    is-command: false
     item:
       material: GOLD_NUGGET
       name: "&6&lTarla Coin"
       lore:
-        - "&7Ozel tarladan dusen"
-        - "&7degerli bir para birimi."
+        - "&7Özel tarladan düşen"
+        - "&7değerli para birimi."
 ```
 
-*Spigot / Paper API 1.19 ve üzeri sürümlerle tam uyumlu şekilde çalışmaktadır.*
+*Spigot / Paper API 1.19 ve üzeri sürümlerle uyumludur.*
