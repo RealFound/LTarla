@@ -2,11 +2,12 @@ name: LTarla
 version: '1.0'
 main: plugin.ltarla.LTarla
 api-version: '1.19'
+description: Advanced and customizable farming and event management plugin for Minecraft servers.
 authors: [Professional]
 
 commands:
   ltarla:
-    description: LTarla ana komutu
+    description: Main command for the LTarla farming and event system.
     usage: "/ltarla <args>"
     permission: ltarla.admin
 

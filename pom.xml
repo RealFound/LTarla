@@ -10,6 +10,7 @@
     <packaging>jar</packaging>
 
     <name>LTarla</name>
+    <description>Advanced and customizable farming and event management plugin for Minecraft servers.</description>
 
     <properties>
         <java.version>17</java.version>
